@@ -9,7 +9,7 @@ width="100%">
 ## 🌐 Acesse já
 **• Morador?** Acesse o portal do morador através **[desse link](https://thiagowaib.github.io/alocanet-site/ "desse link")**.
 
-**• Administrador?** Acesse o portal administrativo através **[desse link](https://thiagowaib.github.io/alocanet-site/admin "desse link")**.
+**• Administrador?** Acesse o portal administrativo através **[desse link](https://thiagowaib.github.io/alocanet-site/Views/Admin/ "desse link")**.
 
 <br>
 
