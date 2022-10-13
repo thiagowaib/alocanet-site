@@ -22,7 +22,7 @@ try{
         if(res.status.toString()[0] === "4")
             console.error(json.message)
         else
-            window.location.href = "./agendamento.html"
+            window.location.href = "./agendamentos.html"
     })
 }catch{}
 
@@ -53,7 +53,7 @@ document.getElementById("botao-login").addEventListener("click", () => {
         } else {                                // -> Sucesso
             console.log(json.message)
             document.cookie = `JWT=${json.tokenAcesso}` // -> Salva JWT nos Cookies
-            window.location.href = "./agendamento.html"
+            window.location.href = "./agendamentos.html"
         }
     })
     .catch((err) => {                           // -> Erro não previsto
