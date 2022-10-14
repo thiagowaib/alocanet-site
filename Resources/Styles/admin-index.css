@@ -17,7 +17,7 @@ body {
 }
 
 #section-esquerda header {
-    background-image: url("../SVGs/brush-decal.svg");
+    background-image: url("../Icons/brush-decal.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
