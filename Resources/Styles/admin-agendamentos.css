@@ -6,6 +6,7 @@ body{
     flex-direction: column;
     height: calc(100vh - 30px);
     padding-top: 30px;
+    background-color: whitesmoke;
 }
 
 
@@ -143,8 +144,47 @@ header nav a:hover {
     padding: 10px;
 }
 
-#calendar .vanilla-calendar-day {
+#calendar{
+    transition: all .4s;
+    background-color: white;
+}
 
+#calendar .vanilla-calendar-day__btn {
+    transition: all .2s;
+    background-color: rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .3);
+    opacity: .8;
+    cursor: not-allowed;
+}
+
+#calendar .vanilla-calendar-day__btn.com-locacao {
+    background-color: #4CACBCF0;
+    color: White;
+    box-shadow: 0 0 8px #4CACBCC0;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#calendar .vanilla-calendar-day__btn_weekend.com-locacao,
+#calendar .vanilla-calendar-day__btn_holiday.com-locacao {
+    background-color: #4CACBCF0;
+    color: coral;
+    box-shadow: 0 0 8px #4CACBCC0;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#calendar .vanilla-calendar-day__btn.com-locacao:hover,
+#calendar .vanilla-calendar-day__btn_weekend.com-locacao:hover,
+#calendar .vanilla-calendar-day__btn_holiday.com-locacao:hover {
+    transform: scale(1.1)
+}
+
+
+#calendar .vanilla-calendar-arrow {
+    display: none;
 }
 
 @media screen and (max-width: 600px) {
