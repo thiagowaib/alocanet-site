@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Arquivos CSS-->
+    <link rel="stylesheet" href="../../Resources/Styles/reset.css">
+    <link rel="stylesheet" href="../../Resources/Libraries/vanilla-calendar/vanilla-calendar.min.css">
+    <link rel="stylesheet" href="../../Resources/Styles/admin-agendamentos.css">
+    <link rel="stylesheet" href="../../Resources/Styles/configuracoes.css">
+    <!--Arquivos de Script-->
+    <script defer src="../../Resources/Libraries/vanilla-calendar/vanilla-calendar.min.js"></script>
+    <script defer src="../../Resources/Scripts/admin-calendario.js"></script>
+    <script defer src="../../Resources/Scripts/cabecalho.js"></script>
+    <title>Tela de Configuração</title>
+</head>
+
+<body>
+    
+    <header>
+        <button id="botao-logout">
+            <img src="../../Resources/Icons/logout.svg" alt="X">
+            Logout
+        </button>
+
+        <div id="container-menu">
+            <button id="botao-abrir-menu">
+                <img src="../../Resources/Icons/menu.svg" alt="Menu">
+            </button>
+
+            <nav id="menu-navegacao" style="display: none;">
+                <button id="botao-fechar-menu">
+                    <img src="../../Resources/Icons/chevron-cima.svg" alt="Fechar">
+                </button>
+                <a href="./agendamentos.html">Agendamentos</a>
+                <a href="./configuracoes.html">Configurações</a>
+                <a href="./moradores.html">Moradores</a>
+                <a href="./espacos.html">Espaços</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="container-conteudo">
+        
+    <div align="center">
+
+        <form action="">
+            <h1>Tela de Configuração</h1>
+            <a href="./configuracoes.html" >Cancelar</a>
+            <button id="#botao-salvar" type="submit">Salvar</button>
+            <div>
+                <h2>Locação</h2>
+                <label for="">Mínimo de dias de antecedência para locação:</label><br>
+                <input type="text" id="" name=""><br>
+                <label for="">Máximo de dias de antecedência para locação:</label><br>
+                <input type="text" id="" name=""><br>
+            </div>
+            <div>
+                <h2>Cancelamento</h2>
+                <label for="">Mínimo de dias de antecedência para cancelamento:</label><br>
+                <input type="text" id="" name=""><br>
+                <label for="">Máximo de dias de antecedência para locação:</label><br>
+                <input type="text" id="" name=""><br>
+            </div>
+            <div>
+                <h2>Limite de Locações</h2>
+                <label for="">Limite de locações simultâneas por locador:</label><br>
+                <input type="text" id="" name=""><br>
+            </div>
+            <h2>Digite: 0 para desativar essa funcionalidade</h2>
+        </div>
+    </form>
+
+    <div>
+        
+    </div>
+
+    </section>
+
+    <section class="container-modal-detalhes">
+
+        <div class="modal-detalhes">
+            <span id="span-fechar-modal">
+                <img src="../../Resources/Icons/fechar.svg" alt="X">
+            </span>
+
+            <header>
+                <h1>Detalhes</h1>
+                <h2>{DATA}</h2>
+            </header>
+
+            <div id="container-locacoes">
+
+            </div>
+
+            <button type="button" id="botao-fechar-modal">
+                Voltar
+            </button>
+        </div>
+
+    </section>
+</body>
+</html>
