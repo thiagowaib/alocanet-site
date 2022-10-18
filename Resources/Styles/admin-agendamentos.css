@@ -135,6 +135,22 @@ header nav a:hover {
     justify-content: center;
 }
 
+#botao-cancelar {
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    padding: 10px;
+}
+#botao-salvar {
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    padding: 10px;
+}
 #calendar {
     max-width: 40%;
     display: block;
