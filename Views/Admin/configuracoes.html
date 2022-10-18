@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Arquivos CSS-->
     <link rel="stylesheet" href="../../Resources/Styles/reset.css">
-    <link rel="stylesheet" href="../../Resources/Libraries/vanilla-calendar/vanilla-calendar.min.css">
-    <link rel="stylesheet" href="../../Resources/Styles/admin-agendamentos.css">
-    <link rel="stylesheet" href="../../Resources/Styles/configuracoes.css">
+    <link rel="stylesheet" href="../../Resources/Styles/admin-configuracoes.css">
     <!--Arquivos de Script-->
-    <script defer src="../../Resources/Libraries/vanilla-calendar/vanilla-calendar.min.js"></script>
-    <script defer src="../../Resources/Scripts/admin-calendario.js"></script>
     <script defer src="../../Resources/Scripts/cabecalho.js"></script>
+    <script defer src="../../Resources/Scripts/admin-configuracoes.js"></script>
+
     <title>Tela de Configuração</title>
 </head>
 
 <body>
     
+    <!-- Cabeçalho de Logout e Menu -->
     <header>
         <button id="botao-logout">
             <img src="../../Resources/Icons/logout.svg" alt="X">
@@ -41,70 +40,46 @@
         </div>
     </header>
     
+    <!-- Conteúdo da Página -->
     <section class="container-conteudo">
-        <section class="container-conteudo">
-        <div align="center">
-            
-            <form action="">
                 
-                <h1>Tela de Configuração</h1>
-                <!-- <button id="#botao-editar" type="button">Editar</button> -->
-                <a href="./editar_configuracao.html">Editar</a>
+            <!-- Título da página -->
+            <h1>Tela de Configuração</h1>
 
-            <div>
+            <!-- Botões que controlam a edição -->
+            <button id="botao-editar-configs" class="mostrar">Habilitar Edição</button>
+            <div id="container-botoes-edicao">
+                <button id="botao-cancelar-edicao">Cancelar</button>
+                <button id="botao-salvar-edicao">Salvar</button>
+            </div>
+
+            <!-- Campos de Dias p/ Locação-->
+            <div class="container-inputs">
                 <h2>Locação</h2>
-                <label for="">Mínimo de dias de antecedência para locação:</label><br>
-                <input type="text" id="" name="" disabled placeholder="Teste sem backend"><br> 
-                <label for="">Máximo de dias de antecedência para locação:</label><br>
-                <input type="text" id="" name="" disabled placeholder="Teste sem backend"><br>
+                <label for="input-min-locacao">Mínimo de dias de antecedência para locação:</label>
+                <input class="input-config" type="number" id="input-min-locacao" disabled>
+
+                <label for="input-max-locacao">Máximo de dias de antecedência para locação:</label>
+                <input class="input-config" type="number" id="input-max-locacao" disabled>
             </div>
-            <div>
+
+            <!-- Campos de Dias p/ Cancelamento -->
+            <div class="container-inputs">
                 <h2>Cancelamento</h2>
-                <label for="">Mínimo de dias de antecedência para cancelamento:</label><br>
-                <input type="text" id="" name="" disabled placeholder="Teste sem backend"><br>
-                <label for="">Máximo de dias de antecedência para locação:</label><br>
-                <input type="text" id="" name="" disabled placeholder="Teste sem backend"><br>
+                <label for="input-min-cancelamento">Mínimo de dias de antecedência para cancelamento:</label>
+                <input class="input-config" type="number" id="input-min-cancelamento" disabled>
+
+                <label for="input-max-cancelamento">Máximo de dias de antecedência para locação:</label>
+                <input class="input-config" type="number" id="input-max-cancelamento" disabled>
             </div>
-            <div>
+
+            <!-- Campos de Limite de Locações -->
+            <div class="container-inputs">
                 <h2>Limite de Locações</h2>
-                <label for="">Limite de locações simultâneas por locador:</label><br>
-                <input type="text" id="" name="" disabled placeholder="Teste sem backend"><br>
+                <label for="input-limite-locacoes">Limite de locações simultâneas por locador:</label>
+                <input class="input-config" type="number" id="input-limite-locacoes" disabled>
             </div>
-            <h2>Digite: 0 para desativar essa funcionalidade</h2>
-
-        </div>
-    </section>
-
-    </section>>
-    </form>
-
-    <div>
-        
-    </div>
-
-    </section>
-
-    <section class="container-modal-detalhes">
-
-        <div class="modal-detalhes">
-            <span id="span-fechar-modal">
-                <img src="../../Resources/Icons/fechar.svg" alt="X">
-            </span>
-
-            <header>
-                <h1>Detalhes</h1>
-                <h2>{DATA}</h2>
-            </header>
-
-            <div id="container-locacoes">
-
-            </div>
-
-            <button type="button" id="botao-fechar-modal">
-                Voltar
-            </button>
-        </div>
-
+            <h3>Digite: 0 para desativar essa funcionalidade</h2>
     </section>
 </body>
 </html>
