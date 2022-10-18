@@ -4,9 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moradores</title>
+     <!-- Importação de Arquivos de Estilo (CSS) -->
+     <link rel="stylesheet" href="../../Resources/Styles/reset.css">
+     <link rel="stylesheet" href="../../Resources/Styles/admin-moradores.css">
+     <!-- Importação de Arquivos de Script (JS) -->
+     <script defer src="../../Resources/Scripts/cabecalho.js"></script>
+     <script defer src="../../Resources/Scripts/admin-moradores.js"></script>
+     <title>Gerenciamento de Moradores</title>
 </head>
 <body>
-    
+
+    <!-- Cabeçalho da página [Logout e Menu] -->
+    <header>
+        <!-- Botão de Logout -->
+        <button id="botao-logout">
+            <img src="../../Resources/Icons/logout.svg" alt="X">
+            Logout
+        </button>
+
+        <div id="container-menu">
+            <!-- Botão de Abrir Menu  -->
+            <button id="botao-abrir-menu">
+                <img src="../../Resources/Icons/menu.svg" alt="Menu">
+            </button>
+
+            <!-- Menu Aberto -->
+            <nav id="menu-navegacao" style="display: none;">
+                <button id="botao-fechar-menu">
+                    <img src="../../Resources/Icons/chevron-cima.svg" alt="Fechar">
+                </button>
+                <a href="./agendamentos.html">Agendamentos</a>
+                <a href="./configuracoes.html">Configurações</a>
+                <a href="./moradores.html">Moradores</a>
+                <a href="./espacos.html">Espaços</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Título e Subtítulo da Página -->
+    <h1 class="titulo">AlocaNet</h1>
+    <h2 class="subtitulo">Tela de Gerenciamento de Moradores</h2>
+
+    <!-- Botões do Gerenciamento de Conta -->
+    <div id="container-botoes-conta">
+        <!-- Botão de Criar Conta -->
+        <button type="button" id="botao-criar-conta" class="botoes-conta">
+            Criar Conta
+        </button>
+        <!-- Botão de Modificar Conta -->
+        <button type="button" id="botao-modificar-conta" class="botoes-conta">
+            Modificar Conta
+        </button>
+        <!-- Botão de Excluir Conta -->
+        <button type="button" id="botao-excluir-conta" class="botoes-conta"> 
+            Excluir Conta
+        </button>
+        <div>
+            <!-- Input: Número do Apto -->
+            <label for="input-n-apto">
+                Apartamento
+            </label>
+            <input id="input-n-apto" type="number" min="1">
+            <!-- Botão de Consultar Apto -->
+            <button disabled type="button" id="botao-consultar-conta" class="botoes-conta">
+                Consultar Conta
+            </button>
+        </div>
+    </div>
+
+
+    <!-- 
+        <div> 
+            <btn>
+            <btn>
+            <btn>
+            <div>
+                <label>
+                <input>
+                <btn>
+            </btn>
+        </div>
+     -->
 </body>
 </html>
