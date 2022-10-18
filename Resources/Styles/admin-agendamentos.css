@@ -193,8 +193,12 @@ header nav a:hover {
         padding: 0 20px;
     } 
     .container-conteudo {
-        margin-top: -50px;
-    } 
+        margin-bottom: 50px;
+    }
+
+    .container-conteudo .container-titulo {
+        padding-bottom: 30px;
+    }
 
     #calendar {
         max-width: 80%;
