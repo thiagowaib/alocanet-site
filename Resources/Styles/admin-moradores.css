@@ -96,27 +96,13 @@ header nav a:hover {
 }
 
 .titulo {
-    background-image: url("../Icons/brush-decal.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-
-    font-size: 4em;
-    font-family: "Crimson Text", serif;
-    color: #FFFFFF;
-    text-align: center;
-    
-    padding: 10px;
-    margin-top: 30px;
-}
-.subtitulo {
     font-size: 2em;
     font-family: "Crimson Text", serif;
     color: #A2A2A2;
     text-align: center;
-    margin-top: 16px;
     text-decoration: underline;
     text-decoration-thickness: 1px;
+    margin-top: 30px;
 }
 #container-botoes-conta {
     display: flex;
@@ -139,6 +125,7 @@ header nav a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.2s;
+    margin: 15px 0;
 }
 
 .botoes-conta:hover {
@@ -188,11 +175,9 @@ header nav a:hover {
 }
 
 @media screen and (max-width: 800px) {
-    .titulo {   
-        font-size: 2em;
-    }
-    .subtitulo {
-        font-size: 1.25em;
+    .titulo {
+        font-size: 1.5em;
+        padding: 0 30px;
     }
     #container-botoes-conta {
         width: 70%;
