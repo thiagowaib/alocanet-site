@@ -41,26 +41,41 @@
 
     <!-- Conteúdo da Página -->
     <section class="container-conteudo">
-      <img src="../../.github/readme_banner.png" alt="" />
       <!-- Título da Página -->
       <div class="container-titulo">
         <h1>Tela de Gerenciamento de Espaços</h1>
       </div>
 
       <!-- Botões do Gerenciamento de Espaços -->
-      <div id="container-botoes-Gerenciamento">
+      <div id="container-botoes-gerenciamento">
+
         <!-- Botão de Criar Espaço -->
-        <button type="button" id="botao-novo-espaco" class="botoes-espaco">
+        <button type="button" id="botao-novo-espaco">
           Novo Espaço
         </button>
+
         <!-- Botões referentes aos espaços -->
-        <button type="button" id="botao-primeiro-espaco" class="botoes-espaco">
-          Espaço 1
-        </button>
-        <button type="button" id="botao-segundo-espaco" class="botoes-espaco">
-          Espaço 2
-        </button>
-        <!-- -->
+        <section class="container-espacos">
+
+          <!-- Espaço -->
+          <div class="espaco" id="espaco-1">
+            Espaço 1
+            <div class="container-opcoes-espaco">
+              <button type="button" class="modificar-espaco" id="modificar-espaco-1"> Modificar </button>
+              <button type="button" class="excluir-espaco" id="excluir-espaco-1"> Excluir </button>
+            </div>
+          </div>
+
+          <!-- Espaço -->
+          <div class="espaco" id="espaco-1">
+            Espaço 2
+            <div class="container-opcoes-espaco">
+              <button type="button" class="modificar-espaco" id="modificar-espaco-1"> Modificar </button>
+              <button type="button" class="excluir-espaco"id="excluir-espaco-1"> Excluir </button>
+            </div>
+          </div>
+
+        </section>
       </div>
     </section>
   </body>

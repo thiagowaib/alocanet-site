@@ -1,3 +1,7 @@
+/*
+    Estilos da página de Gerenciamento de Espaços (Admin/espacos.html)
+*/
+
 body {
   background-color: whitesmoke;
   display: flex;
@@ -97,4 +101,97 @@ header nav a:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-decoration-color: #a2a2a280;
+  margin-top: 30px;
+}
+
+#container-botoes-gerenciamento {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 30px;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#botao-novo-espaco {
+  background-color: #4cacbc;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+
+  font-family: "Barlow", sans-serif;
+  font-size: 1em;
+  font-weight: 600;
+  color: white;
+
+  padding: 8px 20px;
+  width: 80%;
+  margin: 0 auto;
+
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+#botao-novo-espaco:hover {
+  transform: scale(1.05);
+}
+
+.container-espacos {
+  margin-top: 50px;
+}
+
+.container-espacos .espaco {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: "Barlow", sans-serif;
+  font-size: 1.1em; /* 1em -> 100%: 16px*/
+  font-weight: 500;
+  background-color: #F2D8B0;
+
+  padding-left: 10px;
+  margin-bottom: 20px;
+  color: #282828;
+
+  border-radius: 5px;
+}
+
+.container-espacos .espaco .container-opcoes-espaco{
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0px 8px rgba(0,0,0,0.15);
+}
+
+.container-espacos .espaco .container-opcoes-espaco button{
+  outline: 0;
+  
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: .9em;
+  border: 0;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+button.modificar-espaco {
+  background-color: #4758f7;
+  color: white;
+  border-radius: 0 5px 0 0;
+}
+
+button.modificar-espaco:hover{
+  background-color: #2533b8;
+}
+
+button.excluir-espaco {
+  background-color: #bd2e24;
+  color: white;
+  border-radius: 0 0 5px 0;
+}
+
+button.excluir-espaco:hover{
+  background-color: #8d2018;
 }
