@@ -83,6 +83,11 @@ header nav a {
   transition: border 0.2s;
 }
 
+header nav a.link-atual {
+  border-bottom: 1px solid white;
+  user-select: none;
+}
+
 header nav a:hover {
   border-bottom: 1px solid #ffffff;
 }
