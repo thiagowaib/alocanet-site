@@ -144,6 +144,8 @@ header nav a:hover {
 
 .container-espacos {
   margin-top: 50px;
+  opacity: 0;
+  transition: opacity .3s;
 }
 
 .container-espacos .espaco {
