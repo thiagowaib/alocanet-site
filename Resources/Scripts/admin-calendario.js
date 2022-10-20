@@ -77,7 +77,8 @@ const buscarLocacoes = (data) => {
         },
         body: JSON.stringify({
             dataDesejada: data
-        })
+        }),
+        cache: "no-store"
     })
     .then(async (res) => {
         const json = await res.json()
@@ -179,7 +180,8 @@ const buscarDatas = () => {
         method: "GET",
         headers: {
             "auth": `${JWT}`
-        }
+        },
+        cache: "no-store"
     })
     .then(async (res) => {
         const json = await res.json()

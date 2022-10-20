@@ -58,7 +58,8 @@ const excluirConta = (input, numApto) => {
         method: "DELETE",
         headers: {
             "auth": `${JWT}`
-        }
+        },
+        cache: "no-store"
     })
     .then(async (res) => {
         const json = await res.json()
