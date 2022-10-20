@@ -104,6 +104,7 @@ header nav a:hover {
     text-decoration-thickness: 1px;
     margin-top: 30px;
 }
+
 #container-botoes-conta {
     display: flex;
     flex-direction: column;
@@ -270,7 +271,7 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
     font-size: 1em;
     padding: 10px 20px;
-    width: fit-content;
+    width: 16%;
     transition: transform .2s;
     cursor: pointer;
 }
@@ -296,9 +297,11 @@ input::-webkit-inner-spin-button {
     font-weight: 700;
     font-size: 1em;
     padding: 10px 20px;
-    width: fit-content;
+    width: 20%;
     transition: transform .2s;
     cursor: pointer;
+    text-align: center;
+    
 }
 
 #modal-excluir-conta #botao-fechar-modal-excluir-conta:hover {
@@ -355,5 +358,187 @@ input::-webkit-inner-spin-button {
     #modal-excluir-conta {
         width: 95%;
         height: 97.5%;
+    }
+    #modal-excluir-conta #botao-excluir-modal-excluir-conta,
+    #modal-excluir-conta #botao-fechar-modal-excluir-conta{
+        width: 40%;
+    }
+
+}
+
+/*
+    =================================
+    CSS do Modal de Criação de Conta
+    =================================
+*/
+
+#container-modal-criar-conta.aberto {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-modal-criar-conta {
+    display: none;
+}
+
+#modal-criar-conta {
+    background-color: #F5F5F5;
+    height: 95%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#modal-criar-conta #span-fechar-modal-criar-conta {
+    align-self: flex-end;
+    padding: 12px;
+    cursor: pointer;
+}
+
+#modal-criar-conta h1 {
+    font-family: "Crimson Text", serif;
+    font-size: 2em;
+    color: #A2A2A2;
+    margin-bottom: 30px;
+}
+
+#modal-criar-conta label {
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    color: #A2A2A2;
+    padding-left: 2px;
+}
+
+#modal-criar-conta input {
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    color: #282828;
+    padding: 2px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #A2A2A2;
+    background-color: transparent;
+    -moz-appearance: textfield;
+    margin-bottom: 30px;
+}
+
+#modal-criar-conta div {
+    flex: 1;
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#modal-criar-conta #botao-criar-modal-criar-conta {
+    background-color: #F2D8B0;
+    border: 1px solid #F2D8B0;
+    border-radius: 5px;
+    color: #282828;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 20%;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+#modal-criar-conta #botao-criar-modal-criar-conta:hover {
+    transform: scale(1.1)
+}
+
+#modal-criar-conta #botao-criar-modal-criar-conta:disabled {
+    opacity: .8;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+#modal-criar-conta #botao-fechar-modal-criar-conta {
+    background-color: #FFFFFF;
+    border: 1px solid #A2A2A2;
+    border-radius: 5px;
+    color: #A2A2A2;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 20%;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+#modal-criar-conta #botao-fechar-modal-criar-conta:hover {
+    transform: scale(1.1)
+}
+
+#modal-criar-conta #container-locacoes {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+}
+
+#modal-criar-conta .cabecalho-locacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: -1px 2px 0 rgba(0,0,0,.05);
+    background-color: #FFFFFF;
+}
+
+.cabecalho-locacao h1 {
+    font-family: "Barlow", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 2px 10px;
+    color: #282828;
+}
+
+#modal--conta .corpo-locacao {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    margin: 2px 0 45px 0;
+}
+
+.corpo-locacao p {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #282828;
+    font-size: 1em;
+    padding: 2px 0;
+}
+
+.corpo-locacao p span {
+    color: #4CACBC;
+    font-weight: 400;
+    padding: 0 4px;
+
+}
+
+@media screen and (max-width: 600px) {
+    #modal-criar-conta {
+        width: 95%;
+        height: 97.5%;
+    }
+
+    #modal-criar-conta #botao-criar-modal-criar-conta,
+    #modal-criar-conta #botao-fechar-modal-criar-conta {
+        width: 40%;
     }
 }
