@@ -185,8 +185,7 @@ const buscarDatas = () => {
         const json = await res.json()
         if(res.status.toString()[0] === "4") {  // -> Erro Prevísto
             console.error(json.message)
-            console.log(`${JWT}`)
-            // alert(json.message)
+            alert(json.message)
         } else {                                // -> Sucesso
             json.datas.length > 0 ? apagarDias(json.datas) : null;
         }

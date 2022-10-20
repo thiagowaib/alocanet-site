@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Importação de Arquivos de Estilo (CSS) -->
-     <link rel="stylesheet" href="../../Resources/Styles/reset.css">
-     <link rel="stylesheet" href="../../Resources/Styles/admin-moradores.css">
-     <!-- Importação de Arquivos de Script (JS) -->
-     <script defer src="../../Resources/Scripts/cabecalho.js"></script>
-     <script defer src="../../Resources/Scripts/admin-moradores.js"></script>
-     <title>Gerenciamento de Moradores</title>
+    <!-- Importação de Arquivos de Estilo (CSS) -->
+    <link rel="stylesheet" href="../../Resources/Styles/reset.css">
+    <link rel="stylesheet" href="../../Resources/Styles/admin-moradores.css">
+    <!-- Importação de Arquivos de Script (JS) -->
+    <script defer src="../../Resources/Scripts/cabecalho.js"></script>
+    <script defer src="../../Resources/Scripts/admin-moradores.js"></script>
+    <script defer src="../../Resources/Scripts/admin-moradores-excluir-conta.js"></script>
+    <title>Gerenciamento de Moradores</title>
 </head>
 <body>
 
@@ -71,18 +72,30 @@
         </div>
     </div>
 
+    <!-- Modal de Exclusão de Conta -->
+    <section id="container-modal-excluir-conta">
+        <div id="modal-excluir-conta">
 
-    <!-- 
-        <div> 
-            <btn>
-            <btn>
-            <btn>
+            <!-- Botão de Fechar -->
+            <span id="span-fechar-modal-excluir-conta">
+                <img src="../../Resources/Icons/fechar.svg" alt="X">
+            </span>
+
+            <!-- Cabeçalho do Modal -->
+            <h1>Excluir Conta</h1>
+
+            <!-- Input: Número do Apto -->
+            <label for="input-excluir-conta">N° do Apartamento</label>
+            <input id="input-excluir-conta" type="number" min="1">
+
+            <!-- Botões de Cancelar e Excluir conta -->
             <div>
-                <label>
-                <input>
-                <btn>
-            </btn>
+                <button type="button" id="botao-fechar-modal-excluir-conta">Cancelar</button>
+                <button type="button" id="botao-excluir-modal-excluir-conta" disabled>Excluir</button>
+            </div>
         </div>
-     -->
+    </section>
+    <!-- ========================== -->
+
 </body>
 </html>
