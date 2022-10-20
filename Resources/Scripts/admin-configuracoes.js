@@ -2,7 +2,7 @@
  * Script utilizado no funcionamento da
  * edição de configurações (Admin)
  */
-let parametrosDefault = {
+ let parametrosDefault = {
     minDiasAlocar: 0,
     maxDiasAlocar: 0,
     minDiasCancelar: 0,
