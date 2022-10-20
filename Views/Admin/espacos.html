@@ -1,12 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="../../Resources/Icons/favicon.ico">
+    <!--Importação de arquivos CSS-->
+    <link rel="stylesheet" href="../../Resources/Styles/reset.css" />
+    <link rel="stylesheet" href="../../Resources/Styles/admin-espacos.css" />
+    <!--Importação de arquivos javascript-->
+    <script defer src="../../Resources/Scripts/cabecalho.js"></script>
+    <script defer src="../../Resources/Scripts/admin-espacos.js"></script>
     <title>Espaços</title>
-</head>
-<body>
-    
-</body>
+  </head>
+
+  <body>
+    <!--Cabeçalho da página [logout e menu]-->
+    <header>
+      <!--Botão de logout-->
+      <button id="botao-logout">
+        <img src="../../Resources/Icons/logout.svg" alt="X" />
+        Logout
+      </button>
+
+      <div id="container-menu">
+        <!--Botão de abrir menu-->
+        <button id="botao-abrir-menu">
+          <img src="../../Resources/Icons/menu.svg" alt="Menu" />
+        </button>
+
+        <!--Menu aberto-->
+        <nav id="menu-navegacao" style="display: none">
+          <button id="botao-fechar-menu">
+            <img src="../../Resources/Icons/chevron-cima.svg" alt="Fechar" />
+          </button>
+          <a href="./agendamentos.html">Agendamentos</a>
+          <a href="./configuracoes.html">Configurações</a>
+          <a class="link-atual">Espaços</a>
+          <a href="./moradores.html">Moradores</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Conteúdo da Página -->
+    <section class="container-conteudo">
+      <!-- Título da Página -->
+      <div class="container-titulo">
+        <h1>Tela de Gerenciamento de Espaços</h1>
+      </div>
+
+      <!-- Botões do Gerenciamento de Espaços -->
+      <div id="container-botoes-gerenciamento">
+
+        <!-- Botão de Criar Espaço -->
+        <button type="button" id="botao-novo-espaco">
+          Novo Espaço
+        </button>
+
+        <!-- Botões referentes aos espaços -->
+        <section class="container-espacos">
+
+        <!-- Espaços Inseridos via Javascript -->
+        <!-- ================================ -->
+
+        </section>
+      </div>
+    </section>
+  </body>
 </html>

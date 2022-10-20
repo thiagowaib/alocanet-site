@@ -15,7 +15,8 @@ try{
         headers: {
             "Content-type": "application/json; charset=UTF-8",
             "auth": `${JWT}`
-        }
+        },
+        cache: "no-store"
     })
     .then(async(res) => {
         const json = await res.json()
@@ -43,7 +44,8 @@ document.getElementById("botao-login").addEventListener("click", () => {
             usuario: usuario,
             senha: senha
         }),
-        headers: {"Content-type": "application/json; charset=UTF-8"}
+        headers: {"Content-type": "application/json; charset=UTF-8"},
+        cache: "no-store"
     })
     .then(async (res) => {
         const json = await res.json()

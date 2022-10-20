@@ -107,7 +107,8 @@ const modificarParametro = (parametro, valor) => {
         headers: {
             "Content-type": "application/json; charset=UTF-8",
             "auth": `${JWT}`
-        }
+        },
+        cache: "no-store"
     })
     .then(async (res) => {
         const json = await res.json()
@@ -176,7 +177,8 @@ const buscaParametros = () => {
         method: "GET",
         headers: {
             "auth": `${JWT}`
-        }
+        },
+        cache: "no-store"
     })
     .then(async (res) => {
         const json = await res.json()
