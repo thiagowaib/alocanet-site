@@ -11,6 +11,7 @@
     <!--Importação de arquivos javascript-->
     <script defer src="../../Resources/Scripts/cabecalho.js"></script>
     <script defer src="../../Resources/Scripts/admin-espacos.js"></script>
+    <script defer src="../../Resources/Scripts/admin-espacos-excluir-espaco.js"></script>
     <title>Espaços</title>
   </head>
 
@@ -66,5 +67,31 @@
         </section>
       </div>
     </section>
+
+    <!-- Modal de Exclusão de Espaco -->
+    <section id="container-modal-excluir-espaco">
+      <div id="modal-excluir-espaco">
+
+          <!-- Botão de Fechar -->
+          <span id="span-fechar-modal-excluir-espaco">
+              <img src="../../Resources/Icons/fechar.svg" alt="X">
+          </span>
+
+          <!-- Cabeçalho do Modal -->
+          <h1>ATENÇÃO</h1>
+          <h2>Deseja excluir esse espaço?</h2>
+          <div class="container-detalhes-espaco">
+            <p>Nome: <span id="span-nome-espaco"></span></p>
+            <p>Valor: <span id="span-valor-espaco"></span></p>
+          </div>
+
+          <!-- Botões de Cancelar e Excluir conta -->
+          <div class="container-botoes-excluir">
+              <button type="button" id="botao-fechar-modal-excluir-espaco">Cancelar</button>
+              <button type="button" id="botao-excluir-modal-excluir-espaco">Excluir</button>
+          </div>
+      </div>
+  </section>
+  <!-- ========================== -->
   </body>
 </html>

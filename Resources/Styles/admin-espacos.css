@@ -202,3 +202,186 @@ button.excluir-espaco {
 button.excluir-espaco:hover{
   background-color: #8d2018;
 }
+
+/*
+    ==================================
+    CSS do Modal de Exclusão de Espaço
+    ==================================
+*/
+
+#container-modal-excluir-espaco.aberto {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.6);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-modal-excluir-espaco {
+  display: none;
+}
+
+#modal-excluir-espaco {
+  background-color: #F5F5F5;
+  height: 95%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#modal-excluir-espaco #span-fechar-modal-excluir-espaco {
+  align-self: flex-end;
+  padding: 12px;
+  cursor: pointer;
+}
+
+#modal-excluir-espaco h1 {
+  font-family: "Crimson Text", serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: #A2A2A2;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+#modal-excluir-espaco h2 {
+  font-family: "Crimson Text", serif;
+  font-size: 1.5em;
+  color: #A2A2A2;
+  margin-bottom: 30px;
+}
+
+#modal-excluir-espaco .container-detalhes-espaco {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  justify-content: center;
+}
+#modal-excluir-espaco .container-detalhes-espaco p{
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  color: #282828;
+  margin-bottom: 15px;
+}
+
+#modal-excluir-espaco .container-detalhes-espaco p span{
+  font-size: 1em;
+  color: #4CACBC;
+}
+
+
+#modal-excluir-espaco div {
+  flex: 1;
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#modal-excluir-espaco #botao-excluir-modal-excluir-espaco {
+  background-color: #bd2e24;
+  border: 1px solid #bd2e24;
+  border-radius: 5px;
+  color: white;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 20px;
+  width: 16%;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+#modal-excluir-espaco #botao-excluir-modal-excluir-espaco:hover {
+  transform: scale(1.1)
+}
+
+#modal-excluir-espaco #botao-fechar-modal-excluir-espaco {
+  background-color: #FFFFFF;
+  border: 1px solid #A2A2A2;
+  border-radius: 5px;
+  color: #A2A2A2;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 20px;
+  width: 20%;
+  transition: transform .2s;
+  cursor: pointer;
+  text-align: center;
+  
+}
+
+#modal-excluir-espaco #botao-fechar-modal-excluir-espaco:hover {
+  transform: scale(1.1)
+}
+
+#modal-excluir-espaco #container-locacoes {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+}
+
+#modal-excluir-espaco .cabecalho-locacao {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: -1px 2px 0 rgba(0,0,0,.05);
+  background-color: #FFFFFF;
+}
+
+.cabecalho-locacao h1 {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 2px 10px;
+  color: #282828;
+}
+
+#modal-excluir-espaco .corpo-locacao {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  margin: 2px 0 45px 0;
+}
+
+.corpo-locacao p {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  color: #282828;
+  font-size: 1em;
+  padding: 2px 0;
+}
+
+.corpo-locacao p span {
+  color: #4CACBC;
+  font-weight: 400;
+  padding: 0 4px;
+
+}
+
+@media screen and (max-width: 600px) {
+  #modal-excluir-espaco {
+      width: 95%;
+      height: 97.5%;
+  }
+  #modal-excluir-espaco #botao-excluir-modal-excluir-espaco,
+  #modal-excluir-espaco #botao-fechar-modal-excluir-espaco{
+      width: 40%;
+  }
+
+}
