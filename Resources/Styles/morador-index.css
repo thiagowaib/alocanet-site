@@ -1,5 +1,5 @@
 /*
-    Estilos da página de Login Admin (Admin/index.html)
+    Estilos da página de Login do Morador (Morador/index.html)
 */
 
 body {
@@ -75,6 +75,13 @@ body {
     border-bottom: 1px solid #E7E7E7;
     border-radius: 5px 0 0 5px;
     margin-bottom: 7.5%;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 #section-esquerda form div{

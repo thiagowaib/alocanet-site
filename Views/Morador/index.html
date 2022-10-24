@@ -5,10 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../Resources/Icons/favicon.ico">
-    <title>AlocaNet • Login</title>
-    <!-- Tela de Login do Morador -->
+    <!-- Importação de Arquivos de Estilo (CSS) -->
+    <link rel="stylesheet" href="../../Resources/Styles/reset.css">
+    <link rel="stylesheet" href="../../Resources/Styles/morador-index.css">
+    <link rel="stylesheet" href="../../Resources/Styles/carrosel.css">
+    <!-- Importação de Arquivos de Script (JS) -->
+    <script defer src="../../Resources/Scripts/exibir-esconder-senha.js"></script>
+    <script defer src="../../Resources/Scripts/morador-login.js"></script>
+    <script defer src="../../Resources/Scripts/carrosel.js"></script>
+    <!-- Tela de Login do Painel Administrativo -->
+    <title>Login • AlocaNet</title>
 </head>
 <body>
-    
+    <!-- Metade Esquerda da Tela de Login (Formulário de Login) -->
+    <section id="section-esquerda">
+        <!-- Cabeçalho e Título da Página -->
+        <header>AlocaNet</header>
+        <h1>Painel do Morador</h1>
+
+        <!-- Formulário de Login -->
+        <form>
+            <label for="input-usuario">Número do Apartamento</label>
+            <input id="input-usuario" type="number" min="1">
+            <label for="input-senha">Senha</label>
+            <div>
+                <input id="input-senha" type="password">
+                <span>
+                    <img id="fechado" src="../../Resources/Icons/olho-fechado.svg" alt="Exibir Senha">
+                    <img id="aberto" src="../../Resources/Icons/olho-aberto.svg" alt="Esconder Senha">
+                </span>
+            </div>
+            <button id="botao-login" type="button" disabled>Entrar</button>
+        </form>
+
+        <!-- Rodapé da Página -->
+        <footer>
+            Qualquer problema, direcione um email para
+            <span>suporte@alocanet.com</span>
+        </footer>
+    </section>
+
+    <!-- Metade Direita da Tela de Login (Carrosel de Imagens) -->
+    <section id="section-direita" class="carrosel-slider">
+        <!-- Imagem 1 -->
+        <div class="carrosel-slide">
+            <img 
+            src="../../Resources/Images/morador-banner-login-1.jpg"
+            alt="Imagem de uma churrasqueira"
+            >
+        </div>
+        <!-- Imagem 2 -->
+        <div class="carrosel-slide">
+            <img 
+            src="../../Resources/Images/morador-banner-login-2.jpg"
+            alt="Imagem de um salão de festas"
+            >
+        </div>
+        <!-- Imagem 3 -->
+        <div class="carrosel-slide">
+            <img 
+            src="../../Resources/Images/morador-banner-login-3.jpg"
+            alt="Imagem de uma piscina"
+            >
+        </div>
+    </section>
 </body>
 </html>
