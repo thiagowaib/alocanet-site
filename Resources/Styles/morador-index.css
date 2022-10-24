@@ -1,0 +1,218 @@
+/*
+    Estilos da página de Login do Morador (Morador/index.html)
+*/
+
+body {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    background-color: #F5F5F5;
+}
+
+#section-esquerda {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#section-esquerda header {
+    background-image: url("../Icons/brush-decal.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    font-size: 4em;
+    font-family: "Crimson Text", serif;
+    color: #FFFFFF;
+    text-align: center;
+    
+    padding: 10px;
+    margin-top: 30px;
+}
+
+#section-esquerda h1 {
+    font-size: 2.15em;
+    font-family: "Crimson Text", serif;
+    color: #A2A2A2;
+    text-align: center;
+    margin-top: 7.5%;
+}
+
+#section-esquerda h1::after{
+    content: '';
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid #E7E7E7;
+    border-radius: 50%;
+}
+
+#section-esquerda form {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 80%;
+    margin: 7.5% auto 0 auto;
+    margin-top: 7.5%;
+}
+
+#section-esquerda form label {
+    font-family: "barlow", sans-serif;
+    font-size: 1.25em;
+    color: #A2A2A2;
+    padding-left: 10px;
+    margin-bottom: 4px;
+}
+
+#section-esquerda form input {
+    font-family: "barlow", sans-serif;
+    font-size: 1.35em;
+    color: #282828;
+    padding: 6px;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #E7E7E7;
+    border-radius: 5px 0 0 5px;
+    margin-bottom: 7.5%;
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#section-esquerda form div{
+    display: flex;
+    flex-direction: row;
+}
+
+#section-esquerda form div #input-senha {
+    margin-bottom: 0;    
+    flex: 1;
+}
+
+*::-ms-reveal,
+*::-ms-clear {
+    display: none;
+}
+
+#section-esquerda form div span {
+    cursor: pointer;
+    padding: 6px;
+    font-size: 1.35em;
+    border-radius: 0 5px 5px 0;
+    border-bottom: 1px solid #E7E7E7;
+    background-color: #FFFFFF;
+    vertical-align: text-bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#section-esquerda form div span #fechado {
+    display: block;
+    width: 1em;
+    user-select: none;
+}
+
+#section-esquerda form div span #aberto {
+    display: none;
+    width: 1em;
+    user-select: none;
+}
+
+#section-esquerda form button {
+    font-size: 1.25em;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    outline: none;
+    user-select: none;
+    padding: 10px;
+    background-color: #F2D8B0;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: -2px 2px 0px rgba(40, 40, 40, 0.25);
+    transition: transform .2s;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+#section-esquerda form button:hover {
+    transform: scale(1.02)
+}
+
+#section-esquerda form button:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+#section-esquerda form button:disabled:hover {
+    transform: scale(1)
+}
+
+#section-esquerda footer {
+    margin-top: 58px;
+    margin-bottom: 30px;
+    font-family: "Barlow", sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    text-align: center;
+}
+
+#section-esquerda footer span {
+    font-weight: 700;
+    display: block;
+}
+
+#section-esquerda footer span::after {
+    content: '';
+    display: block;
+    border: 1px solid #F2D8B0;
+    width: 22.5%;
+    margin: 2px auto;
+}
+
+
+#section-direita {
+    width: 50vw;
+    height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+        overflow: visible;
+    }
+
+    #section-esquerda {
+        width: 100vw;
+    }
+
+    #section-esquerda header{
+        font-size: 3em;
+    }
+
+    #section-esquerda h1{
+        font-size: 1.75em;
+    }
+
+    #section-esquerda h1::after{
+        width: 60%;
+    }
+
+    #section-esquerda form {
+        width: 80%;
+        padding: 0;
+        margin: 7.5% auto 0 auto;
+    }
+
+    #section-esquerda footer {
+        margin-bottom: 60px;
+    }
+
+    #section-direita {
+        display: none;
+    }
+}
