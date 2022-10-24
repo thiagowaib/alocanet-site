@@ -136,8 +136,13 @@ body {
     transform: scale(1.02)
 }
 
-#section-esquerda form button:active {
-    transform: scale(1.2)
+#section-esquerda form button:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+}
+
+#section-esquerda form button:disabled:hover {
+    transform: scale(1)
 }
 
 #section-esquerda footer {

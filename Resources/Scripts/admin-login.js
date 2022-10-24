@@ -27,15 +27,28 @@ try{
     })
 }catch{}
 
+// Busca os elementos <input> e <button> do login
+const botaoLoginAdmin = document.getElementById("botao-login")
+const inputUsuarioAdmin = document.getElementById("input-usuario")
+const inputSenhaAdmin = document.getElementById("input-senha")
+
+// Função que valida se o botão de fazer login está disabled ou não
+const validarInputs = () => {
+    let validacao = 0
+    inputUsuarioAdmin.value !== "" ? validacao++ : null
+    inputSenhaAdmin.value !== "" ? validacao++ : null
+    validacao === 2 ? botaoLoginAdmin.disabled = false : botaoLoginAdmin.disabled = true
+}
+
+// Define os listeners para o evento de "input" dos elementos <input>
+inputUsuarioAdmin.oninput = validarInputs
+inputSenhaAdmin.oninput = validarInputs
+
 // EventListner no botão de envio
 document.getElementById("botao-login").addEventListener("click", () => {
     // Dados de Login
-    const usuario = document.getElementById("input-usuario").value
-    const senha = document.getElementById("input-senha").value    
-    
-    // Valida se há dados suficientes
-    if(usuario === "") return;
-    if(senha === "") return;
+    const usuario = inputUsuarioAdmin.value
+    const senha = inputSenhaAdmin.value
 
     // https://alocanet-servidor.glitch.me/#api-Admins-loginAdmin
     fetch("https://alocanet-servidor.glitch.me/loginAdmin", {
