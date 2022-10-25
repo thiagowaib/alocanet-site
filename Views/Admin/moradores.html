@@ -13,6 +13,7 @@
     <script defer src="../../Resources/Scripts/admin-cabecalho.js"></script>
     <script defer src="../../Resources/Scripts/admin-moradores-consultar-conta.js"></script>
     <script defer src="../../Resources/Scripts/admin-moradores-excluir-conta.js"></script>
+    <script defer src="../../Resources/Scripts/admin-moradores-modificar-conta.js"></script>
     <script defer src="../../Resources/Scripts/admin-moradores-criar-conta.js"></script>
     <title>Gerenciamento de Moradores</title>
 </head>
@@ -129,6 +130,39 @@
             <div>
                 <button type="button" id="botao-fechar-modal-criar-conta">Cancelar</button>
                 <button type="button" id="botao-criar-modal-criar-conta" disabled>Criar</button>
+            </div>
+        </div>
+    </section>
+    <!-- ========================== -->
+
+    <!-- Modal de Modificação de Conta -->
+    <section id="container-modal-modificar-conta">
+        <div id="modal-modificar-conta">
+
+            <!-- Botão de Fechar -->
+            <span id="span-fechar-modal-modificar-conta">
+                <img src="../../Resources/Icons/fechar.svg" alt="X">
+            </span>
+
+            <!-- Cabeçalho do Modal -->
+            <h1>Modificar Conta</h1>
+
+            <!-- Input: Número do Apto -->
+            <label for="input-modificar-conta">N° do Apartamento</label>
+            <input id="input-modificar-conta" type="number" min="1">
+
+            <!-- Input: Senha -->
+            <label for="senha-modificar-conta">Nova Senha</label>
+            <input id="senha-modificar-conta" type="password">
+
+            <!-- Input: Confirmação de Senha -->
+            <label for="confirmar-senha-modificar-conta">Confirmar senha</label>
+            <input id="confirmar-senha-modificar-conta" type="password">
+
+            <!-- Botões de Cancelar e Salvar senha -->
+            <div>
+                <button type="button" id="botao-fechar-modal-modificar-conta">Cancelar</button>
+                <button type="button" id="botao-salvar-modal-modificar-conta" disabled>Salvar</button>
             </div>
         </div>
     </section>
