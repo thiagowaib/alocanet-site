@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../../Resources/Icons/favicon.ico">
-    <!-- Importação de Arquivos de Script (JS) -->
-    <script defer src="../../Resources/Scripts/morador-cabecalho.js"></script>
     <!-- Importação de Arquivos de Estilo (CSS) -->
     <link rel="stylesheet" href="../../Resources/Styles/reset.css">
+    <link rel="stylesheet" href="../../Resources/Libraries/vanilla-calendar/vanilla-calendar.min.css">
     <link rel="stylesheet" href="../../Resources/Styles/morador-calendario.css">
-    <title>Calendário de Dias</title>
+    <!-- Importação de Arquivos de Script (JS) -->
+    <script defer src="../../Resources/Scripts/morador-cabecalho.js"></script>
+    <script defer src="../../Resources/Libraries/vanilla-calendar/vanilla-calendar.min.js"></script>
+    <script defer src="../../Resources/Scripts/morador-calendario.js"></script>
     <!-- Tela com o Calendário (Morador) -->
+    <title>Calendário de Dias</title>
 </head>
 <body>
     <!-- Cabeçalho da página [Logout e Menu] -->
@@ -26,5 +29,21 @@
             Logout
         </button>        
     </header>
+    <!-- Conteúdo da Página -->
+    <section class="container-calendario">
+        
+        <!-- Título e Subtítulo da Página -->
+        <div class="titulo">
+            <h1>Calendário de Locação</h1>
+            <h2>Selecione um dia para ver sua disponibilidade</h2>
+        </div>
+
+        <!-- Calendário {VanillaCalendar} -->
+        <div id="calendar"></div>
+
+        <!-- Botão de Meus Agendamentos -->
+        <a href="./agendamentos.html">Meus Agendamentos</a>
+
+    </section>
 </body>
 </html>
