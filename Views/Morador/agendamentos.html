@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="../../Resources/Icons/favicon.ico">
     <!-- Importação de Arquivos de Script (JS) -->
     <script defer src="../../Resources/Scripts/morador-cabecalho.js"></script>
+    <script defer src="../../Resources/Scripts/morador-agendamentos.js"></script>
     <!-- Importação de Arquivos de Estilo (CSS) -->
     <link rel="stylesheet" href="../../Resources/Styles/reset.css">
     <link rel="stylesheet" href="../../Resources/Styles/morador-agendamentos.css">
@@ -26,5 +27,30 @@
             Logout
         </button>        
     </header>
+
+    <!-- Conteúdo da Página -->
+    <section class="container-conteudo">
+
+        <!-- Título e Subtítulo da Página -->
+        <div>
+            <h1>Minhas Locações</h1>
+            <h2 id="display-limite-locacoes">
+                Você pode ter mais N locações ativas
+            </h2>
+        </div>
+
+        <!-- Lista de Conteúdos -->
+        <ul id="container-locacoes">
+            <!-- 
+                Locações inseridas via JS (morador-agendamentos.js) 
+                seguindo o template HTML abaixo:
+            -->
+        </ul>
+
+        <!-- Botão "Ver Calendário" -->
+        <a href="./calendario.html">Ver Calendário</a>
+
+    </section>
+    
 </body>
 </html>
