@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +17,7 @@
     <script defer src="../../Resources/Scripts/admin-moradores-criar-conta.js"></script>
     <title>Gerenciamento de Moradores</title>
 </head>
+
 <body>
 
     <!-- Cabeçalho da página [Logout e Menu] -->
@@ -46,8 +47,8 @@
         </div>
     </header>
 
-   <!-- Título da Página -->
-   <h1 class="titulo">Tela de Gerenciamento de Moradores</h1>
+    <!-- Título da Página -->
+    <h1 class="titulo">Tela de Gerenciamento de Moradores</h1>
 
 
     <!-- Botões do Gerenciamento de Conta -->
@@ -61,7 +62,7 @@
             Modificar Conta
         </button>
         <!-- Botão de Excluir Conta -->
-        <button type="button" id="botao-excluir-conta" class="botoes-conta"> 
+        <button type="button" id="botao-excluir-conta" class="botoes-conta">
             Excluir Conta
         </button>
         <div>
@@ -71,7 +72,7 @@
             </label>
             <input id="input-n-apto" type="number" min="1">
             <!-- Botão de Consultar Apto -->
-            <button disabled type="button" id="botao-consultar-conta" class="botoes-conta">
+            <button type="button" id="botao-consultar-conta" class="botoes-conta">
                 Consultar Conta
             </button>
         </div>
@@ -167,6 +168,64 @@
         </div>
     </section>
     <!-- ========================== -->
+    <!-- Modal de Consulta de Conta -->
+    <section id="container-modal-consultar-conta">
+        <div id="modal-consultar-conta">
+
+            <!-- Botão de Fechar -->
+            <span id="span-fechar-modal-consultar-conta">
+                <img src="../../Resources/Icons/fechar.svg" alt="X">
+            </span>
+
+            <!-- Cabeçalho do Modal -->
+            <h1>Histórico</h1>
+            <h2>Apartamento 777</h2>
+
+            <!-- Elementos para exibir o primeiro registro do histórico -->
+            <Div>
+                <Div>
+                    <label for="label-consultar-conta">Data da Localção</label>
+                </Div>
+                <Div>
+                    <label for="label-consultar-conta">R$250,00</label>
+                </Div>
+            </Div>
+            <input Disabled id="input-local-consultar-conta-1" type="text" min="1" placeholder="Nome do Espaço">
+            <input Disabled id="input-data-consultar-conta-1" type="text" min="1" placeholder="Desde xx/xx/xxxx">
+            
+            <!-- Elementos para exibir o segundo registro do histórico -->
+            <Div>
+                <Div>
+                    <label for="label-consultar-conta">Data da Localção</label>
+                </Div>
+                <Div>
+                    <label for="label-consultar-conta">R$250,00</label>
+                </Div>
+            </Div>
+            <input Disabled id="input-local-consultar-conta-2" type="text" min="1" placeholder="Nome do Espaço">
+            <input Disabled id="input-data-consultar-conta-2" type="text" min="1" placeholder="Cancelado em xx/xx/xxxx">
+            
+            <!-- Elementos para exibir o terceiro registro do histórico -->
+            <Div>
+                <Div>
+                    <label for="label-consultar-conta">Data da Localção</label>
+                </Div>
+                <Div>
+                    <label for="label-consultar-conta">R$250,00</label>
+                </Div>
+            </Div>
+            <input Disabled id="input-local-consultar-conta-3" type="text" min="1" placeholder="Nome do Espaço">
+            <input Disabled id="input-data-consultar-conta-3" type="text" min="1" placeholder="Cancelado em xx/xx/xxxx">
+            
+
+            <!-- Botões de Voltar -->
+            <div>
+                <button type="button" id="botao-fechar-modal-consultar-conta">Voltar</button>
+            </div>
+
+        </div>
+    </section>
 
 </body>
+
 </html>
