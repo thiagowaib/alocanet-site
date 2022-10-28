@@ -632,3 +632,214 @@ input::-webkit-inner-spin-button {
         width: 40%;
     }
 }
+
+/*
+    =================================
+    CSS do Modal de Consulta de Conta
+    =================================
+*/
+
+#container-modal-consultar-conta.aberto {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container-modal-consultar-conta {
+    display: none;
+}
+
+#modal-consultar-conta {
+    background-color: #F5F5F5;
+    height: 95%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#modal-consultar-conta #span-fechar-modal-consultar-conta {
+    align-self: flex-end;
+    padding: 12px;
+    cursor: pointer;
+}
+
+#modal-consultar-conta h1 {
+    font-family: "Crimson Text", serif;
+    font-size: 2em;
+    color: #A2A2A2;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #A2A2A280;
+}
+
+#modal-consultar-conta h2 {
+    font-family: "Crimson Text", serif;
+    font-weight: 700;
+    font-size: 1.75em;
+    color: #4CACBC;
+    margin-bottom: 30px;
+}
+
+#modal-consultar-conta .container-itens-historico {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 55%;
+    overflow-y: scroll;
+    transition: opacity .2s;
+    opacity: 0;
+}
+
+.container-itens-historico .item-historico {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.item-historico span {
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color:#A2A2A2;
+    display: flex;
+    align-self: center;
+}
+
+.item-historico .container-historico {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.container-historico-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    color: #4CACBC;
+    margin-bottom: 4px;
+}
+
+.container-historico-meio {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+
+    background-color: #4CACBC80;
+    border-radius: 5px;
+}
+
+.container-historico-inferior {
+    display: flex;
+    flex-direction: row;
+
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+
+    background-color: #4CACBCF0;
+    width: fit-content;
+    padding: 4px 6px;
+    border-radius: 0 0 4px 4px;
+    margin-left: 10px;
+    color: white;
+}
+
+.item-historico.cancelado .container-historico-inferior{
+    background-color: #d6463bF0;
+}
+
+.item-historico.concluido .container-historico-inferior{
+    background-color: #56e451f0;
+}
+
+
+
+#modal-consultar-conta .container-botoes {
+    flex: 1;
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+#modal-consultar-conta #botao-consultar-modal-consultar-conta {
+    background-color: #F2D8B0;
+    border: 1px solid #F2D8B0;
+    border-radius: 5px;
+    color: #282828;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 20%;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+#modal-consultar-conta #botao-consultar-modal-consultar-conta:hover {
+    transform: scale(1.1)
+}
+
+#modal-consultar-conta #botao-consultar-modal-consultar-conta:disabled {
+    opacity: .8;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+#modal-consultar-conta #botao-fechar-modal-consultar-conta {
+    background-color: #FFFFFF;
+    border: 1px solid #A2A2A2;
+    border-radius: 5px;
+    color: #A2A2A2;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 20%;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+#modal-consultar-conta #botao-fechar-modal-consultar-conta:hover {
+    transform: scale(1.1)
+}
+
+@media screen and (max-width: 1000px) {
+    #modal-consultar-conta {
+        width: 95%;
+        height: 97.5%;
+    }
+
+    #modal-consultar-conta #botao-consultar-modal-consultar-conta,
+    #modal-consultar-conta #botao-fechar-modal-consultar-conta {
+        width: 40%;
+    }
+
+    #modal-consultar-conta .container-itens-historico {
+        width: 90%;
+        height: 60%;
+    }
+}
