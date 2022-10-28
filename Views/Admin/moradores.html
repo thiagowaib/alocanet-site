@@ -46,8 +46,8 @@
         </div>
     </header>
 
-   <!-- Título da Página -->
-   <h1 class="titulo">Tela de Gerenciamento de Moradores</h1>
+    <!-- Título da Página -->
+    <h1 class="titulo">Tela de Gerenciamento de Moradores</h1>
 
 
     <!-- Botões do Gerenciamento de Conta -->
@@ -76,31 +76,6 @@
             </button>
         </div>
     </div>
-
-    <!-- Modal de Exclusão de Conta -->
-    <section id="container-modal-excluir-conta">
-        <div id="modal-excluir-conta">
-
-            <!-- Botão de Fechar -->
-            <span id="span-fechar-modal-excluir-conta">
-                <img src="../../Resources/Icons/fechar.svg" alt="X">
-            </span>
-
-            <!-- Cabeçalho do Modal -->
-            <h1>Excluir Conta</h1>
-
-            <!-- Input: Número do Apto -->
-            <label for="input-excluir-conta">N° do Apartamento</label>
-            <input id="input-excluir-conta" type="number" min="1">
-
-            <!-- Botões de Cancelar e Excluir conta -->
-            <div>
-                <button type="button" id="botao-fechar-modal-excluir-conta">Cancelar</button>
-                <button type="button" id="botao-excluir-modal-excluir-conta" disabled>Excluir</button>
-            </div>
-        </div>
-    </section>
-    <!-- ========================== -->
 
     <!-- Modal de Criação de Conta -->
     <section id="container-modal-criar-conta">
@@ -163,6 +138,74 @@
             <div>
                 <button type="button" id="botao-fechar-modal-modificar-conta">Cancelar</button>
                 <button type="button" id="botao-salvar-modal-modificar-conta" disabled>Salvar</button>
+            </div>
+        </div>
+    </section>
+    <!-- ========================== -->
+
+    <!-- Modal de Exclusão de Conta -->
+    <section id="container-modal-excluir-conta">
+        <div id="modal-excluir-conta">
+
+            <!-- Botão de Fechar -->
+            <span id="span-fechar-modal-excluir-conta">
+                <img src="../../Resources/Icons/fechar.svg" alt="X">
+            </span>
+
+            <!-- Cabeçalho do Modal -->
+            <h1>Excluir Conta</h1>
+
+            <!-- Input: Número do Apto -->
+            <label for="input-excluir-conta">N° do Apartamento</label>
+            <input id="input-excluir-conta" type="number" min="1">
+
+            <!-- Botões de Cancelar e Excluir conta -->
+            <div>
+                <button type="button" id="botao-fechar-modal-excluir-conta">Cancelar</button>
+                <button type="button" id="botao-excluir-modal-excluir-conta" disabled>Excluir</button>
+            </div>
+        </div>
+    </section>
+    <!-- ========================== -->
+
+    <!-- Modal de Consulta de Conta -->
+    <section id="container-modal-consultar-conta">
+        <div id="modal-consultar-conta">
+
+            <!-- Botão de Fechar -->
+            <span id="span-fechar-modal-consultar-conta">
+                <img src="../../Resources/Icons/fechar.svg" alt="X">
+            </span>
+
+            <!-- Cabeçalho do Modal -->
+            <h1>Histórico</h1>
+            <h2>Apartamento 32</h2>
+
+            <!-- Lista de Itens -->
+            <ul class="container-itens-historico">
+                <!-- 
+                    Itens inseridos via Javascript (admin-moradores-consultar-conta.js)
+                    seguindo o modelo abaixo:
+
+                    <li class="item-historico ${dataFormatada <= new Date().getTime() ? "concluido" : ""}">
+                        <span>${index+1}&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+                        <div class="container-historico">
+                            <div class="container-historico-superior">
+                                <p>${item.data}</p>
+                                <p>R$${item.valor},00</p>
+                            </div>
+                            <div class="container-historico-meio">${item.espaco}</div>
+                            <div class="container-historico-inferior">
+                                ${dataFormatada <= new Date().getTime() ? "Concluído em" : "Desde"} ${item.createdAt}
+                                </div>
+                        </div>
+                    </li>
+                -->
+            </ul>
+
+            <!-- Botões de Voltar conta -->
+            <div class="container-botoes">
+                <button type="button" id="botao-fechar-modal-consultar-conta">Voltar</button>
             </div>
         </div>
     </section>
