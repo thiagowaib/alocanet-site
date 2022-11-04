@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="../../Resources/Icons/favicon.ico">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../Resources/Icons/favicon.ico"
+    />
     <!--Importação de arquivos CSS-->
     <link rel="stylesheet" href="../../Resources/Styles/reset.css" />
     <link rel="stylesheet" href="../../Resources/Styles/admin-espacos.css" />
     <!--Importação de arquivos javascript-->
     <script defer src="../../Resources/Scripts/cabecalho.js"></script>
     <script defer src="../../Resources/Scripts/admin-espacos.js"></script>
+    <script defer src="../../Resources/Scripts/admin-modal-criar-espaco.js"></script>
     <title>Espaços</title>
   </head>
 
@@ -51,19 +56,43 @@
 
       <!-- Botões do Gerenciamento de Espaços -->
       <div id="container-botoes-gerenciamento">
-
         <!-- Botão de Criar Espaço -->
-        <button type="button" id="botao-novo-espaco">
-          Novo Espaço
-        </button>
+        <button type="button" id="botao-novo-espaco">Novo Espaço</button>
 
         <!-- Botões referentes aos espaços -->
         <section class="container-espacos">
-
-        <!-- Espaços Inseridos via Javascript -->
-        <!-- ================================ -->
-
+          <!-- Espaços Inseridos via Javascript -->
+          <!-- ================================ -->
         </section>
+      </div>
+    </section>
+
+    <!--modal (overlay) criação de espaço-->
+    <section id="container-modal-criar-espaco">
+      <div id="modal-criar-espaco">
+        <!--Botão de fechar-->
+        <span id="fechar-modal-criar-espaco">
+          <img src="../../Resources/Icons/fechar.svg" alt="X" />
+        </span>
+
+        <!--Cabeçalho do modal-->
+        <header>
+          <h1 id="titulo-modal">Criar espaço</h1>
+        </header>
+
+        <!--Input: nome do espaço-->
+        <label for="nome-espaco">Nome do espaço</label>
+        <input id="nome-espaco" type="text" />
+
+        <!--Input Valor-->
+        <label for="valor">Valor</label>
+        <input id="valor-espaco" type="number" min="0" />
+
+        <!--Botões de cancelar e criar espaço-->
+        <div>
+          <button type="button" id="botao-cancelar">Cancelar</button>
+          <button type="button" id="botao-criar" disabled>Criar</button>
+        </div>
       </div>
     </section>
   </body>
