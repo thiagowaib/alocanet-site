@@ -17,8 +17,8 @@ const popularEspacos = (espacos) => {
         <div class="espaco" id="espaco-${i}">
             ${espaco.nome}
             <div class="container-opcoes-espaco">
-                <button type="button" class="modificar-espaco" id="modificar-espaco-1" objectId="${espaco.id}" valor="${espaco.valor}"> Modificar </button>
-                <button type="button" class="excluir-espaco" id="excluir-espaco-1" objectId="${espaco.id}" valor="${espaco.valor}"> Excluir </button>
+                <button type="button" class="modificar-espaco" id="modificar-espaco-${i}" objectId="${espaco.id}" valor="${espaco.valor}" nome="${espaco.nome}"> Modificar </button>
+                <button type="button" class="excluir-espaco" id="excluir-espaco-${i}" objectId="${espaco.id}" valor="${espaco.valor}" nome="${espaco.nome}"> Excluir </button>
             </div>
         </div> 
         `

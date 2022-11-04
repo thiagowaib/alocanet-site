@@ -1,5 +1,5 @@
 /**
- * Script utilizado para realizar o login do admin
+ * Script utilizado para realizar o login do morador
  */
 
 // Verifica se já há JWT salvo em cookie
@@ -23,38 +23,38 @@ try{
         if(res.status.toString()[0] === "4")
             console.error(json.message)
         else
-            window.location.href = "./agendamentos.html"
+            window.location.href = "./calendario.html"
     })
 }catch{}
 
 // Busca os elementos <input> e <button> do login
-const botaoLoginAdmin = document.getElementById("botao-login")
-const inputUsuarioAdmin = document.getElementById("input-usuario")
-const inputSenhaAdmin = document.getElementById("input-senha")
+const botaoLoginMorador = document.getElementById("botao-login")
+const inputUsuarioMorador = document.getElementById("input-usuario")
+const inputSenhaMorador = document.getElementById("input-senha")
 
 // Função que valida se o botão de fazer login está disabled ou não
 const validarInputs = () => {
     let validacao = 0
-    inputUsuarioAdmin.value !== "" ? validacao++ : null
-    inputSenhaAdmin.value !== "" ? validacao++ : null
-    validacao === 2 ? botaoLoginAdmin.disabled = false : botaoLoginAdmin.disabled = true
+    inputUsuarioMorador.value > 0 ? validacao++ : null
+    inputSenhaMorador.value !== "" ? validacao++ : null
+    validacao === 2 ? botaoLoginMorador.disabled = false : botaoLoginMorador.disabled = true
 }
 
 // Define os listeners para o evento de "input" dos elementos <input>
-inputUsuarioAdmin.oninput = validarInputs
-inputSenhaAdmin.oninput = validarInputs
+inputUsuarioMorador.oninput = validarInputs
+inputSenhaMorador.oninput = validarInputs
 
 // EventListner no botão de envio
-document.getElementById("botao-login").addEventListener("click", () => {
+botaoLoginMorador.addEventListener("click", () => {
     // Dados de Login
-    const usuario = inputUsuarioAdmin.value
-    const senha = inputSenhaAdmin.value
+    const usuario = inputUsuarioMorador.value
+    const senha = inputSenhaMorador.value    
 
-    // https://alocanet-servidor.glitch.me/#api-Admins-loginAdmin
-    fetch("https://alocanet-servidor.glitch.me/loginAdmin", {
+    // https://alocanet-servidor.glitch.me/#api-Admins-loginApto
+    fetch("https://alocanet-servidor.glitch.me/loginApto", {
         method: "POST",
         body: JSON.stringify({
-            usuario: usuario,
+            numero: usuario,
             senha: senha
         }),
         headers: {"Content-type": "application/json; charset=UTF-8"},
@@ -67,8 +67,9 @@ document.getElementById("botao-login").addEventListener("click", () => {
             alert(json.message)
         } else {                                // -> Sucesso
             console.log(json.message)
-            document.cookie = `JWT=${json.tokenAcesso}` // -> Salva JWT nos Cookies
-            window.location.href = "./agendamentos.html"
+            document.cookie = `APTO=${parseInt(usuario)}`   // -> Salva o Nº do Apto nos Cookies
+            document.cookie = `JWT=${json.tokenAcesso}`     // -> Salva JWT nos Cookies
+            window.location.href = "./calendario.html"
         }
     })
     .catch((err) => {                           // -> Erro não previsto

@@ -1,0 +1,233 @@
+/* CSS da tela de "Meus Agendamentos" do painel do Morador (Morador/agentamentos.html) */
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 30px);
+    padding-top: 30px;
+    background-color: whitesmoke;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    background-image: url("../Icons/brush-decal.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    font-size: 1.25em;
+    font-family: "Crimson Text", serif;
+    color: #FFFFFF;
+    text-align: center;
+
+    padding: 30px 60px;
+    transition: all .2s;
+}
+
+header button {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+}
+
+header #botao-logout {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Crimson Text", serif;
+    font-size: 1em;
+    color: #4CACBC;
+
+}
+
+header #botao-logout img {
+    display: block;
+    margin-top: 4px;
+    width: 1.05em;
+}
+
+.container-conteudo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.container-conteudo h1 {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-size: 2em;
+    color: #A2A2A2;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #A2A2A280;
+}
+
+.container-conteudo h2 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #A2A2A2;
+    margin-top: 6px;
+    padding: 0 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity .4s;
+}
+
+.container-conteudo h2 span {
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+ul#container-locacoes {
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    width: 40%;
+    margin: 30px auto 0 auto;
+    align-items: center;
+    transition: opacity .3s;
+    opacity: 0;
+
+    overflow-y: scroll;
+}
+
+li.locacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.locacao-numero {
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    color: #C9C9C9;
+    width: 1em;
+    align-self: flex-end;
+    padding-bottom: 1em;
+}
+
+.locacao-dados {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.locacao-dados-superior {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 4px;
+}
+
+.locacao-dados-superior p {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #4CACBC;
+}
+
+.locacao-dados-inferior {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #4CACBC40;
+    border-radius: 5px;
+}
+
+.locacao-dados-inferior p {
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #282828;
+}
+
+.locacao-dados-inferior div {
+    display: flex;
+}
+
+.locacao-dados-inferior div button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.locacao-dados-inferior div span {
+    display: none;
+}
+
+.locacao-dados-inferior div span.aberto {
+    display: flex;
+    position: absolute;
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    padding: 4px 6px;
+    margin: 38px 0 0 -60px;
+    border-radius: 0 0 5px 5px;
+    font-weight: 400px;
+    color: white;
+    background-color: rgba(254, 45, 32, 0.7);
+    transition: background-color .2s;
+}
+
+.locacao-dados-inferior div span.aberto:hover {
+    background-color: rgba(254, 45, 32, .9);
+}
+
+.container-conteudo a {
+    background-color: #F2D8B0;
+    outline: none;
+    border: none;
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #282828;
+    align-self: center;
+    text-align: center;
+    width: fit-content;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 15px 0;
+    text-decoration: none;
+    position: absolute;
+    bottom: 30px;
+}
+    
+.container-conteudo a:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 800px) {
+    ul#container-locacoes {
+        width: 80%;
+    }
+    
+    .locacao-dados-superior p,
+    .locacao-dados-inferior p {
+        font-size: .9em;
+    }
+}

@@ -1,0 +1,208 @@
+/* CSS da tela de Calendário do painel do Morador (Morador/calendario.html) */
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 30px);
+    padding-top: 30px;
+    background-color: whitesmoke;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    background-image: url("../Icons/brush-decal.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    font-size: 1.25em;
+    font-family: "Crimson Text", serif;
+    color: #FFFFFF;
+    text-align: center;
+
+    padding: 30px 60px;
+    transition: all .2s;
+}
+
+header button {
+    outline: none;
+    background-color: transparent;
+    border: 0;
+}
+
+header #botao-logout {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: "Crimson Text", serif;
+    font-size: 1em;
+    color: #4CACBC;
+
+}
+
+header #botao-logout img {
+    display: block;
+    margin-top: 4px;
+    width: 1.05em;
+}
+
+.container-calendario {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 30px 0 7.5% 0;
+    justify-content: space-evenly;
+}
+
+.container-calendario h1 {
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-size: 2em;
+    color: #A2A2A2;
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #A2A2A280;
+}
+
+.container-calendario h2 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #A2A2A2;
+    margin-top: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+#botao-cancelar {
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    padding: 10px;
+}
+#botao-salvar {
+    max-width: 40%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    padding: 10px;
+}
+#calendar {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 0 16px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#calendar{
+    transition: all .4s;
+    background-color: white;
+}
+
+#calendar .vanilla-calendar-day__btn {
+    transition: all .2s;
+    background-color: #4CACBCF0;
+    color: White;
+    box-shadow: 0 0 8px #4CACBCC0;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#calendar .vanilla-calendar-day__btn.passado,
+#calendar .vanilla-calendar-day__btn_weekend.passado,
+#calendar .vanilla-calendar-day__btn_holiday.passado {
+    transition: none;
+    background-color: rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .3);
+    opacity: .8;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+#calendar .vanilla-calendar-day__btn.passado:hover,
+#calendar .vanilla-calendar-day__btn_weekend.passado:hover,
+#calendar .vanilla-calendar-day__btn_holiday.passado:hover {
+    transform: scale(1)
+}
+
+
+#calendar .vanilla-calendar-day__btn_weekend,
+#calendar .vanilla-calendar-day__btn_holiday {
+    background-color: #4CACBCF0;
+    color: white;
+    box-shadow: 0 0 8px #4CACBCC0;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#calendar .vanilla-calendar-day__btn:hover,
+#calendar .vanilla-calendar-day__btn_weekend:hover,
+#calendar .vanilla-calendar-day__btn_holiday:hover {
+    transform: scale(1.1)
+}
+
+#calendar .vanilla-calendar-arrow {
+    display: none;
+}
+
+.container-calendario a {
+    background-color: #F2D8B0;
+    outline: none;
+    border: none;
+    font-family: "Barlow", sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #282828;
+    align-self: center;
+    text-align: center;
+    width: 20%;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 15px 0;
+    text-decoration: none;
+}
+    
+.container-calendario a:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        justify-content: space-between;
+        padding: 0 20px;
+    } 
+    .container-calendario {
+        margin-bottom: 50px;
+    }
+
+    .container-calendario h1 {
+        padding-bottom: 30px;
+    }
+
+    .container-calendario a {
+        width: 50%;
+    }
+
+    #calendar {
+        width: 80%;
+    }
+}

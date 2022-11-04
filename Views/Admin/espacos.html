@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="../../Resources/Styles/reset.css" />
     <link rel="stylesheet" href="../../Resources/Styles/admin-espacos.css" />
     <!--Importação de arquivos javascript-->
-    <script defer src="../../Resources/Scripts/cabecalho.js"></script>
+    <script defer src="../../Resources/Scripts/admin-cabecalho.js"></script>
     <script defer src="../../Resources/Scripts/admin-espacos.js"></script>
     <script defer src="../../Resources/Scripts/admin-modal-criar-espaco.js"></script>
+    <script defer src="../../Resources/Scripts/admin-espacos-modificar-espaco.js"></script>
+    <script defer src="../../Resources/Scripts/admin-espacos-excluir-espaco.js"></script>
     <title>Espaços</title>
   </head>
 
@@ -95,5 +97,67 @@
         </div>
       </div>
     </section>
+    <!-- Modal de Modificar de Espaco -->
+    <section id="container-modal-modificar-espaco">
+      <div id="modal-modificar-espaco">
+
+          <!-- Botão de Fechar -->
+          <span id="span-fechar-modal-modificar-espaco">
+              <img src="../../Resources/Icons/fechar.svg" alt="X">
+          </span>
+
+          <!-- Cabeçalho do Modal -->
+          <h1>Modificando Espaço</h1>
+
+          <!-- Detalhes do Espaço -->
+          <div class="container-detalhes-espaco">
+            <!-- Detalhes inseridos pelo JS -->
+            <!-- ========================== -->
+          </div>
+          
+          <div class="container-inputs-espaco">
+            <!-- Input: Nome do Espaço -->
+            <label for="nome-modificar-espaco">Novo nome do espaço (Opcional)</label>
+            <input id="nome-modificar-espaco" type="text">
+
+            <!-- Input: Valor do Espaço -->
+            <label for="valor-modificar-espaco">Novo valor do espaço (Opcional)</label>
+            <input id="valor-modificar-espaco" type="number" min="1">
+          </div>
+
+          <!-- Botões de Cancelar e modificar conta -->
+          <div class="container-botoes-modificar">
+              <button type="button" id="botao-fechar-modal-modificar-espaco">Cancelar</button>
+              <button type="button" id="botao-modificar-modal-modificar-espaco" disabled>Salvar</button>
+          </div>
+      </div>
+  </section>
+  <!-- ========================== -->
+
+    <!-- Modal de Exclusão de Espaco -->
+    <section id="container-modal-excluir-espaco">
+      <div id="modal-excluir-espaco">
+
+          <!-- Botão de Fechar -->
+          <span id="span-fechar-modal-excluir-espaco">
+              <img src="../../Resources/Icons/fechar.svg" alt="X">
+          </span>
+
+          <!-- Cabeçalho do Modal -->
+          <h1>ATENÇÃO</h1>
+          <h2>Deseja excluir esse espaço?</h2>
+          <div class="container-detalhes-espaco">
+            <p>Nome: <span id="span-nome-espaco"></span></p>
+            <p>Valor: <span id="span-valor-espaco"></span></p>
+          </div>
+
+          <!-- Botões de Cancelar e Excluir conta -->
+          <div class="container-botoes-excluir">
+              <button type="button" id="botao-fechar-modal-excluir-espaco">Cancelar</button>
+              <button type="button" id="botao-excluir-modal-excluir-espaco">Excluir</button>
+          </div>
+      </div>
+  </section>
+  <!-- ========================== -->
   </body>
 </html>
