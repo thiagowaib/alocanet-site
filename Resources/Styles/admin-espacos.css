@@ -135,7 +135,7 @@ header nav a:hover {
   margin: 0 auto;
 
   cursor: pointer;
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 #botao-novo-espaco:hover {
@@ -145,7 +145,7 @@ header nav a:hover {
 .container-espacos {
   margin-top: 50px;
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 
 .container-espacos .espaco {
@@ -156,7 +156,7 @@ header nav a:hover {
   font-family: "Barlow", sans-serif;
   font-size: 1.1em; /* 1em -> 100%: 16px*/
   font-weight: 500;
-  background-color: #F2D8B0;
+  background-color: #f2d8b0;
 
   padding-left: 10px;
   margin-bottom: 20px;
@@ -165,22 +165,22 @@ header nav a:hover {
   border-radius: 5px;
 }
 
-.container-espacos .espaco .container-opcoes-espaco{
+.container-espacos .espaco .container-opcoes-espaco {
   display: flex;
   flex-direction: column;
-  box-shadow: -4px 0px 8px rgba(0,0,0,0.15);
+  box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.15);
 }
 
-.container-espacos .espaco .container-opcoes-espaco button{
+.container-espacos .espaco .container-opcoes-espaco button {
   outline: 0;
-  
+
   font-family: "Barlow", sans-serif;
   font-weight: 600;
-  font-size: .9em;
+  font-size: 0.9em;
   border: 0;
   padding: 4px 8px;
   cursor: pointer;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
 }
 
 button.modificar-espaco {
@@ -189,7 +189,7 @@ button.modificar-espaco {
   border-radius: 0 5px 0 0;
 }
 
-button.modificar-espaco:hover{
+button.modificar-espaco:hover {
   background-color: #2533b8;
 }
 
@@ -199,7 +199,7 @@ button.excluir-espaco {
   border-radius: 0 0 5px 0;
 }
 
-button.excluir-espaco:hover{
+button.excluir-espaco:hover {
   background-color: #8d2018;
 }
 
@@ -212,6 +212,140 @@ button.excluir-espaco:hover{
   #container-botoes-gerenciamento {
     width: 80%;
     margin: 30px auto 0 auto;
+  }
+}
+
+/*
+CSS do modal de criação de espaço
+*/
+
+#container-modal-criar-espaco.aberto {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.6);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container-modal-criar-espaco {
+  display: none;
+}
+
+#modal-criar-espaco {
+  background-color: #f5f5f5;
+  height: 95%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+
+#modal-criar-espaco #fechar-modal-criar-espaco {
+  align-self: flex-end;
+  padding: 12px;
+  cursor: pointer;
+}
+
+#modal-criar-espaco h1{
+  font-family: "Crimson Text", serif;
+  font-size: 2em;
+  color: #a2a2a2;
+  margin-bottom: 30px;
+}
+
+#modal-criar-espaco label{
+  font-family: "Barlow", sans-serif;
+  font-size: 1em;
+  color: #A2A2A2;
+  padding-left: 2px;
+}
+
+#modal-criar-espaco input {
+  font-family: "Barlow", sans-serif;
+  font-size: 1em;
+  color: #282828;
+  padding: 2px;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #a2a2a2;
+  background-color: transparent;
+  -moz-appearance: textfield;
+  margin-bottom: 30px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+#modal-criar-espaco input::-webkit-outer-spin-button,
+#modal-criar-espaco input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#modal-criar-espaco div{
+  flex: 1;
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#modal-criar-espaco #botao-criar {
+  background-color: #F2D8B0;
+  border: 1px solid #F2D8B0;
+  border-radius: 5px;
+  color: #282828;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 20px;
+  width: 20%;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+#modal-criar-espaco #botao-criar:hover {
+  transform: scale(1.1)
+}
+
+#modal-criar-espaco #botao-criar:disabled {
+  opacity: .8;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+#modal-criar-espaco #botao-cancelar {
+  background-color: #ffffff;
+  border: 1px solid #A2A2A2;
+  border-radius: 5px;
+  color: #A2A2A2;
+  font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 10px 20px;
+  width: 20%;
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+#modal-criar-espaco #bota-cancelar:hover {
+  transform: scale(1.1)
+}
+
+@media screen and (max-width: 800px) {
+  #modal-criar-espaco {
+    width: 90%;
+  }
+  #modal-criar-espaco #botao-criar,
+  #modal-criar-espaco #botao-cancelar {
+    width: 40%;
   }
 }
 
