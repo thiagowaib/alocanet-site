@@ -45,5 +45,53 @@
         <a href="./agendamentos.html">Meus Agendamentos</a>
 
     </section>
+
+    <!-- Modal (overlay) de confirmação -->
+    <!-- Fundo escuro -->
+    <section class="container-modal-confirmacao">
+
+        <!-- Fundo Claro -->
+        <div class="modal-confirmacao">
+            <!-- Botão de Fechar -->
+            <span id="span-fechar-modal-confirmacao">
+                <img src="../../Resources/Icons/fechar.svg" alt="X">
+            </span>
+
+            <!-- Cabeçalho do Modal -->
+            <header>
+                <h1>Detalhes</h1>
+                <div id="container-detalhes">
+                    <h2 id="apto-modal">...</h2>
+                    <h3 id="data-modal">...</h3>
+                    <h4 id="limite-modal">...</h4>
+                </div>
+            </header>
+
+            <!-- Container para as locações -->
+            <div style="display: flex;" id="container-locacoes">
+                <h1>Selecione o espaço que deseja alugar</h1>
+                <input type="radio">
+                <div class="locacao">
+                    <div class="cabecalho-locacao">
+                        <h1>{NOME DO ESPAÇO}</h1>
+                        <img src="../../Resources/Images/imagem-locacao.png" alt="Salão de Festa">
+                    </div>
+                    <div class="corpo-locacao">
+                        <p>{VALOR DA LOCAÇÃO}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botão de Agendar -->
+            <button type="button" id="botao-agendar-modal-confirmacao">
+                Agendar
+            </button>
+            <!-- (Outro) Botão de Fechar -->
+            <button type="button" id="botao-fechar-modal-confirmacao">
+                Cancelar
+            </button>
+        </div>
+
+    </section>
 </body>
 </html>
