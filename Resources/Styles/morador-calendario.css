@@ -331,6 +331,7 @@ CSS Do Modal (Overlay) de Confirmação
     overflow-y: scroll;
     transition: opacity .2s;
     opacity: 0;
+    overflow-x: hidden;
 }
 
 .modal-confirmacao #botao-agendar-modal-confirmacao {
@@ -353,7 +354,7 @@ CSS Do Modal (Overlay) de Confirmação
     transform: scale(1.1)
 }
 
-#modal-confirmacao #botao-agendar-modal-confrmacao:disabled {
+.modal-confirmacao #botao-agendar-modal-confirmacao:disabled {
     opacity: .8;
     cursor: not-allowed;
     transform: scale(1);
@@ -389,54 +390,160 @@ CSS Do Modal (Overlay) de Confirmação
     font-weight: 400;
     font-size: 1em;
     color: #A2A2A2;
-    margin-top: 6px;
+    margin-top: 4px;
+    margin-bottom: 6px;
     display: flex;
     justify-content: center;
 }
 
-.modal-confirmacao .cabecalho-locacao {
+input[type="radio"] {
+    display: flex;
+    align-self: center;
+    margin-top: 5%;
+    margin-bottom: -5%;
+    transform: scale(1.5);
+}
+
+.cabecalho-locacao {
     display: flex;
     flex-direction: row;
     align-items: center;
+    width: 88%;
     justify-content: space-between;
     border-radius: 5px;
     box-shadow: -1px 2px 0 rgba(0,0,0,.05);
     background-color: #FFFFFF;
-}
-
-.cabecalho-locacao h1 {
+    margin-left: 50px;
+    padding: 0px 0px 0px 10px;
     font-family: "Barlow", sans-serif;
     font-size: 1.2em;
     font-weight: 500;
-    padding: 2px 10px;
     color: #282828;
 }
 
-.modal-detalhes .corpo-locacao {
+.modal-confirmacao .cabecalho-locacao.alugado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 88%;
+    justify-content: space-between;
+    border-radius: 5px;
+    transition: none;
+    transform: none;
+    background-color: rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .3);
+    opacity: .8;
+    box-shadow: none;
+    cursor: not-allowed;
+    margin-left: 50px;
+}
+
+.modal-confirmacao .cabecalho-locacao.selecionado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 88%;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 2.1px solid #4CACBC;
+    background-color: #FFFFFF;
+    margin-left: 50px;
+    padding: 0px 0px 0px 5px;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #282828;
+}
+
+.modal-confirmacao .cabecalho-locacao:not(.alugado):hover {
+    transform: scale(1.01)
+}
+
+.modal-confirmacao .corpo-locacao {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
-    margin: 2px 0 45px 0;
+    margin: 2px 0 20px 0;
 }
 
-.corpo-locacao p {
-    font-family: "Barlow", sans-serif;
-    font-weight: 600;
+.corpo-locacao h2 {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+    color: #56e451f0;
+    margin-left: 46px;
+    text-align: start;
+}
+
+.corpo-locacao h2.alugado {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+    color: #bd2e24;
+    margin-left: 46px;
+    text-align: start;
+}
+
+.corpo-locacao h3 {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
     color: #282828;
+    margin-top: -26px;
+    margin-left: 30px;
     font-size: 1em;
-    padding: 2px 0;
+    text-align: end;
 }
 
-.corpo-locacao p span {
-    color: #4CACBC;
-    font-weight: 400;
-    padding: 0 4px;
-
-}
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
     .modal-confirmacao {
         width: 95%;
         height: 97.5%;
+    }
+    .modal-confirmacao #botao-agendar-modal-confirmacao{
+        width: 16%;
+    }
+    .modal-confirmacao #botao-fechar-modal-confirmacao{
+        width: 16%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modal-confirmacao #botao-agendar-modal-confirmacao{
+        width: 25%;
+        margin-right: 20px;
+    }
+    .modal-confirmacao #botao-fechar-modal-confirmacao{
+        width: 25%;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .modal-confirmacao #botao-agendar-modal-confirmacao{
+        width: 25%;
+        margin-right: 50px;
+    }
+    .modal-confirmacao #botao-fechar-modal-confirmacao{
+        width: 25%;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .modal-confirmacao #botao-agendar-modal-confirmacao{
+        width: 30%;
+        margin-right: 40px;
+    }
+    .modal-confirmacao #botao-fechar-modal-confirmacao{
+        width: 30%;
+        margin-left: 40px;
     }
 }

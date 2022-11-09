@@ -81,9 +81,18 @@ const abrirModalConfirmacao = (data) => {
     // Adiciona os EventListeners para fechar o modal quando necessário
     document.getElementById("span-fechar-modal-confirmacao").addEventListener("click", fecharModalConfirmacao)
     document.getElementById("botao-fechar-modal-confirmacao").addEventListener("click", fecharModalConfirmacao)
+    const botaoAgendar = document.getElementById("botao-agendar-modal-confirmacao")
+    const inputs = document.getElementsByClassName("inputSelecionar")
+    botaoAgendar.disabled = true
 
-    // Indica a data em questão no cabeçalho do modal
-    const dataModalConfirmacao = modal.children[0].children[1].children[1]
+    botaoAgendar.addEventListener('click', () => {
+        let idEspaco = ""
+
+        for(let i = 0; i < inputs.length ; i++)
+            if(inputs[i].checked) idEspaco = inputs[i].value
+            
+        agendar(data, idEspaco)
+    })
     // Busca as Locações no Banco de Dados e Popula o Modal
     buscarLocacoes(data)
 } 
@@ -120,18 +129,34 @@ const popularModalConfirmacao = (espacos = [], numeroApto = 0, data = "", dados 
     {
         const espaco = espacos[i]
 
-        // !! HTML Inserido dinâmicamente
         espacosHTML +=`
-            <h1 class="${espaco.disponivel ? "disponivel": "ocupado"}">${espaco.nome}</h1>
-            `
+        <div class="locacao">
+            <input class="inputSelecionar" type="radio" name="radio" id="radio1" value="${espaco.espacoId}" ${espaco.disponivel?"":"disabled"}/>
+            <div class="cabecalho-locacao ${espaco.disponivel?"":"alugado"}">
+                <label>${espaco.nome}</label>
+                <img src="../../Resources/Images/imagem-locacao.png" alt="Salão de Festa">
+            </div>
+            <div class="corpo-locacao">
+                <h2 class="${espaco.disponivel?"":"alugado"}">${espaco.disponivel?"DISPONÍVEL":"ALUGADO"}</h2>
+                <h3>R$ ${parseInt(espaco.valor)},00</h3>
+            </div>
+        </div>
+        `
     }
-    // !! EI, Ferrari do futuro
-    // !! Essa linha de código tá comentada só pra você
-    // !! poder mexer no HTML primeiro;
-    // !! Depois que você terminar lá, escreve o HTML de forma dinâmica
-    // !! no loop ali em cima, e descomenta essa linha :)
-    // containerLocacoes.innerHTML = espacosHTML
+    containerLocacoes.innerHTML = espacosHTML
     containerLocacoes.style.opacity = "1"
+
+    const botaoAgendar = document.getElementById("botao-agendar-modal-confirmacao")
+    const inputs = document.getElementsByClassName("inputSelecionar")
+    for(let i=0; i<inputs.length; i++){
+        inputs[i].addEventListener("input", ()=>{
+            let checked = false
+            for(let e=0; e<inputs.length; e++)
+                if(inputs[e].checked)
+                    checked = true
+            checked ? botaoAgendar.disabled = false: botaoAgendar.disabled = true
+        })
+    }
 }
 
 // Busca as Locações no Banco de Dados
@@ -146,7 +171,6 @@ const buscarLocacoes = (data) => {
             .find(tag => tag.startsWith("JWT="))
             .split("=")[1]
 
-        // !! Busca o Número do Apartamento (APTO) dos cookies pra usar na request
         // Busca o APTO salvo em cookie
         APTO = document.cookie
             .split("; ")
@@ -186,9 +210,54 @@ const buscarLocacoes = (data) => {
     })
 }
 
-// Realiza o display do limite de locações na tela
-const displayLimiteLocacoes = (limiteLocacoes, numLocacoes) => {
+const agendar = (data, idEspaco) => {
+     // Busca o JWT e APTO dos cookies
+     let JWT = ""
+     let APTO = ""
+     try{
+         // Busca o JWT salvo em cookie
+         JWT = document.cookie
+             .split("; ")
+             .find(tag => tag.startsWith("JWT="))
+             .split("=")[1]
+ 
+         // Busca o APTO salvo em cookie
+         APTO = document.cookie
+             .split("; ")
+             .find(tag => tag.startsWith("APTO="))
+             .split("=")[1]
+     }catch{
+         console.warn("JWT ou APTO não encontrados como cookie")
+         return;                     // -> Caso não haja JWT, a função já retorna
+     }
 
-   
+    fetch("https://alocanet-servidor.glitch.me/alocar//", {
+        method: "POST",
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+            "auth": `${JWT}`
+        },
+        body: JSON.stringify({
+            data: data,
+            apartamento: APTO,
+            espacoId: idEspaco
+        }),
+        cache: "no-store"
+    })
+    .then(async (res) => {
+        const json = await res.json()
+        if(res.status.toString()[0] === "4") {  // -> Erro Prevísto
+            console.error(json.message)
+            alert(json.message)
+        } else {                                // -> Sucesso
+            alert(json.message)
+            console.log(json.message)
+            fecharModalConfirmacao()
+        }
+    })
+    .catch((err) => {                           // -> Erro não previsto
+        console.error(err)
+        alert("Houve algo de errado x-x")
+    })
 }
 window.onload = apagarDias
