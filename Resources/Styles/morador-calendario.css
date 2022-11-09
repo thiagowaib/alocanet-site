@@ -206,3 +206,344 @@ header #botao-logout img {
         width: 80%;
     }
 }
+
+/*
+==================================
+CSS Do Modal (Overlay) de Confirmação
+==================================
+*/
+
+.container-modal-confirmacao.aberto {
+    display: flex;
+}
+
+.container-modal-confirmacao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.6);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal-confirmacao {
+    background-color: #F5F5F5;
+    height: 95%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.modal-confirmacao #span-fechar-modal-confirmacao{
+    align-self: flex-end;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.modal-confirmacao header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.modal-confirmacao header h1 {
+    background-image: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    font-family: "Crimson Text", serif;
+    font-size: 2em;
+    color: #A2A2A2;
+}
+
+.modal-confirmacao header div {
+    transition: opacity .2s;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.modal-confirmacao header div h2 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #282828;
+    font-size: 1em;
+    padding: 2px 0;
+    align-self: flex-start;
+    margin: 5px 30px;
+}
+
+.modal-confirmacao header div h2 span {
+    color: #4CACBC;
+    font-weight: 400;
+    padding: 0 4px;
+
+}
+
+.modal-confirmacao header div h3 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #282828;
+    font-size: 1em;
+    align-self: flex-start;
+    margin: 5px 30px;
+}
+
+.modal-confirmacao header div h3 span {
+    color: #4CACBC;
+    font-weight: 400;
+    padding: 0 4px;
+
+}
+
+.modal-confirmacao header div h4 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    color: #282828;
+    font-size: 1em;
+    align-self: flex-start;
+    margin: 5px 30px;
+}
+
+.modal-confirmacao header div h4 span {
+    color: #4CACBC;
+    font-weight: 400;
+    padding: 0 1px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+
+}
+.modal-confirmacao #container-locacoes {
+    align-self: center;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    overflow-y: scroll;
+    transition: opacity .2s;
+    opacity: 0;
+    overflow-x: hidden;
+}
+
+.modal-confirmacao #botao-agendar-modal-confirmacao {
+    background-color: #F2D8B0;
+    border: 1px solid #F2D8B0;
+    border-radius: 5px;
+    color: #282828;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: fit-content;
+    align-self: flex-end;
+    margin: 0px 90px -71px 0px;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.modal-confirmacao #botao-agendar-modal-confirmacao:hover {
+    transform: scale(1.1)
+}
+
+.modal-confirmacao #botao-agendar-modal-confirmacao:disabled {
+    opacity: .8;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+.modal-confirmacao #botao-fechar-modal-confirmacao {
+    background-color: #FFFFFF;
+    border: 1px solid #A2A2A2;
+    border-radius: 5px;
+    color: #A2A2A2;
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    padding: 10px 20px;
+    width: fit-content;
+    align-self: flex-start;
+    margin: 30px 90px 30px;
+    transition: transform .2s;
+    cursor: pointer;
+}
+
+.modal-confirmacao #botao-fechar-modal-confirmacao:hover {
+    transform: scale(1.1)
+}
+
+.modal-confirmacao #container-locacoes {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+}
+
+.modal-confirmacao #container-locacoes h1 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #A2A2A2;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="radio"] {
+    display: flex;
+    align-self: center;
+    margin-top: 5%;
+    margin-bottom: -5%;
+    transform: scale(1.5);
+}
+
+.cabecalho-locacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 88%;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: -1px 2px 0 rgba(0,0,0,.05);
+    background-color: #FFFFFF;
+    margin-left: 50px;
+    padding: 0px 0px 0px 10px;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #282828;
+}
+
+.modal-confirmacao .cabecalho-locacao.alugado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 88%;
+    justify-content: space-between;
+    border-radius: 5px;
+    transition: none;
+    transform: none;
+    background-color: rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .3);
+    opacity: .8;
+    box-shadow: none;
+    cursor: not-allowed;
+    margin-left: 50px;
+}
+
+.modal-confirmacao .cabecalho-locacao.selecionado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 88%;
+    justify-content: space-between;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 2.1px solid #4CACBC;
+    background-color: #FFFFFF;
+    margin-left: 50px;
+    padding: 0px 0px 0px 5px;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #282828;
+}
+
+.modal-confirmacao .cabecalho-locacao:not(.alugado):hover {
+    transform: scale(1.01)
+}
+
+.modal-confirmacao .corpo-locacao {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    margin: 2px 0 20px 0;
+}
+
+.corpo-locacao h2 {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+    color: #56e451f0;
+    margin-left: 46px;
+    text-align: start;
+}
+
+.corpo-locacao h2.alugado {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 26px;
+    color: #bd2e24;
+    margin-left: 46px;
+    text-align: start;
+}
+
+.corpo-locacao h3 {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #282828;
+    margin-top: -26px;
+    margin-left: 30px;
+    font-size: 1em;
+    text-align: end;
+}
+
+@media screen and (max-width: 1000px) {
+    .modal-confirmacao {
+        width: 95%;
+        height: 97.5%;
+    }
+    .modal-confirmacao #botao-agendar-modal-confirmacao{
+        width: 16%;
+    }
+    .modal-confirmacao #botao-fechar-modal-confirmacao{
+        width: 16%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .modal-confirmacao #botao-agendar-modal-confirmacao{
+        width: 25%;
+        margin-right: 20px;
+    }
+    .modal-confirmacao #botao-fechar-modal-confirmacao{
+        width: 25%;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .modal-confirmacao #botao-agendar-modal-confirmacao{
+        width: 25%;
+        margin-right: 50px;
+    }
+    .modal-confirmacao #botao-fechar-modal-confirmacao{
+        width: 25%;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .modal-confirmacao #botao-agendar-modal-confirmacao{
+        width: 30%;
+        margin-right: 40px;
+    }
+    .modal-confirmacao #botao-fechar-modal-confirmacao{
+        width: 30%;
+        margin-left: 40px;
+    }
+}
